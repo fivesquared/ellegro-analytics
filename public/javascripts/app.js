@@ -1,4 +1,4 @@
-;(function ($, window, undefined) {
+ï»¿;(function ($, window, undefined) {
   'use strict';
 
   var $doc = $(document),
@@ -63,7 +63,7 @@ function __trackMetric(email, behavior, scope, value){
 				// reset stuff..
 				resetUI();
 			}
-    	}
+		}
 	}
 	xmlhttp.open("POST","http://contextexperiment.orchestra.io/ns_trackbehavior.php",true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
