@@ -42,6 +42,8 @@
 			<input id="value" type="text" placeholder="value">
 			<a class="button alert radius" onclick="sendMetric()">send metric</a>
 		</div>
+		<br/>
+		<span id="latestInsertID" class="label"></span>
 	</div>
   </div>
 
@@ -115,7 +117,7 @@
 				//
 				var respStr = xmlhttp.responseText + "";
 				//
-				alert(respStr);
+				$('#latestInsertID').text(respStr);
 				//
 				if (respStr == 'error'){
 					// no-op
