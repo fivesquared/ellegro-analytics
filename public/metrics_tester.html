@@ -97,41 +97,41 @@
     });
 	
 	//
-	
 	function getXHR(){
-	var ret;
-	if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-		ret=new XMLHttpRequest();
-	} else {// code for IE6, IE5
-		ret=new ActiveXObject("Microsoft.XMLHTTP");
+		var ret;
+		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+			ret=new XMLHttpRequest();
+		} else {// code for IE6, IE5
+			ret=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		return ret;
 	}
-	return ret;
-}
 
-// LOGIN FUNCTIONALITY //
-function _trackMetric(email, behavior, scope, value){
-	//
-	var xmlhttp = getXHR();
-	xmlhttp.onreadystatechange = function(){
-		if (xmlhttp.readyState==4 && xmlhttp.status==200){
-			//
-			var respStr = xmlhttp.responseText + "";
-			//
-			alert(respStr);
-			if (respStr == 'error'){
-				// no-op
-				alert('tracking error!');
-			}else{
-				// reset stuff..
-				resetUI();
+	function _trackMetric(email, behavior, scope, value){
+		//
+		var xmlhttp = getXHR();
+		xmlhttp.onreadystatechange = function(){
+			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+				//
+				var respStr = xmlhttp.responseText + "";
+				//
+				if (respStr == 'error'){
+					// no-op
+					alert('tracking error!');
+				}else{
+					// reset stuff..
+					$('#behavior').val("");
+					$('#scope').val("");
+					$('#value').val("");
+					
+				}
 			}
 		}
+		xmlhttp.open("POST","ns_trackbehavior.php",true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xmlhttp.send("e="+email+"&b="+behavior+"&s="+scope+"&v="+value);
+		//
 	}
-	xmlhttp.open("POST","ns_trackbehavior.php",true);
-	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlhttp.send("e="+email+"&b="+behavior+"&s="+scope+"&v="+value);
-	//
-}
 	// function send metric
 	function sendMetric(){
 		_trackMetric($('#emailaddress').val(), $('#behavior').val(), $('#scope').val(), $('#value').val());
