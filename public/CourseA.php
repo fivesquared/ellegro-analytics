@@ -44,7 +44,7 @@
 					<param name="menu" value="true" />
 					<param name="devicefont" value="false" />
 					<param name="salign" value="" />
-					<param name="allowScriptAccess" value="sameDomain" />
+					<param name="allowScriptAccess" value="always" />
 					<!--[if !IE]>-->
 					<object type="application/x-shockwave-flash" data="CourseA.swf" width="995" height="658">
 						<param name="movie" value="CourseA.swf" />
@@ -57,7 +57,7 @@
 						<param name="menu" value="true" />
 						<param name="devicefont" value="false" />
 						<param name="salign" value="" />
-						<param name="allowScriptAccess" value="sameDomain" />
+						<param name="allowScriptAccess" value="always" />
 					<!--<![endif]-->
 						<a href="http://www.adobe.com/go/getflash">
 							<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
