@@ -4,6 +4,7 @@
 	// we must insert our new project accordingly
 	$table = "courserandomizer";
 	//
+	$_SESSION['loggedinEmail'] = $_GET['e'];
 	// let's get the latest course
 	$query = "SELECT latestrequestcourse FROM ".$table." WHERE id=1";
 	//

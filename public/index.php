@@ -46,9 +46,9 @@
 		<img src="images/title.png">
 		<div class="panel radius">
 			<h3>start here</h3>
-			<input type="text" placeholder="your email">
+			<input id="emailAdd" type="text" placeholder="your email">
 			<input type="text" placeholder="your name">
-			<a class="small radius button" href="experiment.php">begin experiment</a>
+			<a class="small radius button" onclick="beginExperiment()">begin experiment</a>
 		</div>
     </div>
   </div>
@@ -103,6 +103,10 @@
     $(window).load(function(){
       $("#featured").orbit();
     });
+	
+	function beginExperiment(){
+		window.location = 'experiment.php?e=' + $('#emailAdd').val();
+	}
     </script> 
   
 </body>
