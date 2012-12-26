@@ -47,7 +47,7 @@
 		<div class="panel radius">
 			<h3>start here</h3>
 			<input id="emailAdd" type="text" placeholder="your email">
-			<input type="text" placeholder="your name">
+			<input id="namePerson" type="text" placeholder="your name">
 			<a class="small radius button" onclick="beginExperiment()">begin experiment</a>
 		</div>
     </div>
@@ -105,7 +105,7 @@
     });
 	
 	function beginExperiment(){
-		window.location = 'experiment.php?e=' + $('#emailAdd').val();
+		window.location = 'experiment.php?e=' + $('#emailAdd').val() + '&n='+$('#namePerson').val();
 	}
     </script> 
   

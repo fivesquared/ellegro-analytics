@@ -72,8 +72,8 @@
   <div class="row">
 	<div class="twelve columns">
 		<div class="panel radius">
-			<h3>welcome, john doe</h3>
-			<div align="center"><a href="<?php echo $latestCourse; ?>.html"><img src="images/course_titler.png"></a></div>
+			<h3>welcome, <?php echo $_GET['n'];?></h3>
+			<div align="center"><a href="<?php echo $latestCourse; ?>.php"><img src="images/course_titler.png"></a></div>
 			<br/><br/>
 		</div>
 	</div>
