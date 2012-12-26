@@ -5,7 +5,7 @@
 	$table = "behaviors";
 	//
 	//
-	$p_email = $_SESSION['loggedinEmail'];
+	$p_email = $_POST['e'];
 	$p_behavior = $_POST['b'];
 	$p_scope = $_POST['s'];
 	$p_value = $_POST['v'];
