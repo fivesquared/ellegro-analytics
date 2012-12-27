@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	//
 	include "ns_include.php";
 	// we must insert our new project accordingly
@@ -6,9 +6,9 @@
 	//
 	//
 	$p_email = $_SESSION['loggedinEmail'];
-	$p_behavior = $_POST['b'];
-	$p_scope = $_POST['s'];
-	$p_value = $_POST['v'];
+	$p_behavior = $_POST['beh'];
+	$p_scope = $_POST['sco'];
+	$p_value = $_POST['val'];
 	$p_epoch = time();
 	//
 	//
