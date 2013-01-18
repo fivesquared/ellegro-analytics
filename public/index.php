@@ -11,7 +11,7 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>The Context Experiment</title>
+  <title>ellegro® analytics</title>
   
   <!-- Included CSS Files (Uncompressed) -->
   <!--
@@ -30,25 +30,21 @@
   <![endif]-->
 
 </head>
-<body style="background: url(images/background.jpg) no-repeat center center fixed; 	-webkit-background-size: cover;	-moz-background-size: cover; -o-background-size: cover; background-size: cover;">>
+<body style="background: url(images/background.png) no-repeat center center fixed; 	-webkit-background-size: cover;	-moz-background-size: cover; -o-background-size: cover; background-size: cover;">>
 
   <div class="row">
 	<div class="six columns">
 		<div style="padding:25px; background:rgba(0,0,0,0.45); color:#f1f1f1; font-size:1.25em;">
-			<h3 style="color:#f1f1f1;">we need your help!</h3>
-			<span class="label">it should only take a few minutes, really.</span><br/><br/>
-			<p>We've put together a simple presentation about information and how, in today's world, we need to be little cautious when sharing it. We want to understand what makes the presentation worthy of the viewer's time and interest.</p>
-			<p>If you could share a few minutes of your time and some basic feedback, we'd appreciate it tremendously!</p><p><strong>Register via the link to the right</strong>, and we'll get you through it quick! Hopefully, you'll also pick up a couple of interesting bits from the presentation.</p>
-			<span class="label">thank you!</span>
+			<h3 style="color:#f1f1f1;">ellegro® analytics</h3>
 		</div>
 	</div>
 	<div class="six columns">
 		<img src="images/title.png">
 		<div class="panel radius">
 			<h3>start here</h3>
-			<input id="emailAdd" type="text" placeholder="your email">
-			<input id="namePerson" type="text" placeholder="your name">
-			<a class="small radius button" onclick="beginExperiment()">begin experiment</a>
+			<input id="emailAdd" type="text" placeholder="email">
+			<input id="namePerson" type="password" placeholder="password">
+			<a class="small radius button" onclick="accessAnalytics()">access analytics</a>
 		</div>
     </div>
   </div>
@@ -104,8 +100,8 @@
       $("#featured").orbit();
     });
 	
-	function beginExperiment(){
-		window.location = 'experiment.php?e=' + $('#emailAdd').val() + '&n='+$('#namePerson').val();
+	function accessAnalytics(){
+		//window.location = 'experiment.php?e=' + $('#emailAdd').val() + '&n='+$('#namePerson').val();
 	}
     </script> 
   
